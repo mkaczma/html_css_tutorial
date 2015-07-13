@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Order pizza</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body class="background">
+	<form action="PizzaOrders.html">
+		<div>
+			<fieldset>
+				<legend>Customer</legend>
+				<div>
+					<label class="requier">Name</label><input type="text" id="name" /><br />
+				</div>
+				<div>
+					<label class="requier">Surname</label><input type="text" id="surname" /><br />
+				</div>
+				<div>
+					<label>Email</label><input type="text" id="email" /><br />
+				</div>
+				<div>
+					<label>Type</label><input type="radio" name="type" value="individual">Individual<input
+						type="radio" name="type" value="bussiness">Bussiness<br>
+				</div>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset>
+				<legend>Pizza</legend>
+				<div>
+					<label>Name</label><input type="text" id="pizzaName" />
+				</div>
+				<div>
+					<label>Type</label> <select name="pizzaType">
+						<option>Small</option>
+						<option>Normall</option>
+						<option>Large</option>
+					</select>
+				</div>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset>
+				<legend>Suggested delivery date</legend>
+				<div>
+					<input type="text" id="date" placeholder="dd-mm-rrrr">
+				</div>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset>
+				<legend>Additional data</legend>
+				<div>
+					<textarea rows="3" cols="15"></textarea>
+				</div>
+			</fieldset>
+		</div>
+		<div>
+			<input class="button" type="submit" value="Order pizza">
+		</div>
+	</form>
+</body>
+</html>
