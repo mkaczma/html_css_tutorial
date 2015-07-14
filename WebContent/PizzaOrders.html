@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="pizzaOrderApp">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
 <title>PizzaOrders</title>
+<script src="angular.min.js"></script>
+<script src="controller.js"></script>
 </head>
-<body>
+<body ng-controller="PizzaOrderListCtrl">
+
+
+	<h1>{{hello}}</h1>
+	<input type="text" ng-model="hello"/>
+	
+	
 	<div>
 		<table>
 			<caption>Pizza orders</caption>
@@ -18,34 +27,25 @@
 				<th>Customer</th>
 				<th>Type</th>
 			</tr>
-			<tr>
-				<td>Margharita</td>
-				<td>Big</td>
-				<td>Created</td>
-				<td>12.12.2015 12:12</td>
-				<td>False</td>
-				<td>John Smith<br>444-444-444<br>Lodz, Piotrokwska
-					19/23
-				</td>
-				<td><img height="60" width="60" alt="bussiness"
-					src="Images/bussiness.jpg"></td>
-			</tr>
-			<tr>
-				<td>Corleone</td>
-				<td>Small</td>
-				<td>Done</td>
-				<td>12.12.2015 12:12</td>
-				<td>True</td>
-				<td>Jan Kowalski<br>333-222-111<br>Zgierz, Jakas tam
-					19/23
-				</td>
-				<td><img height="60" width="60" alt="individual"
-					src="Images/individual.jpg"></td>
+			<tr ng-repeat="order in orders">
+				<th>{{order.pizzaName}}</th>
+				<th>{{order.pizzaType}}</th>
+				<th>{{order.status}}</th>
+				<th>{{order.deliveryTime}}</th>
+				<th>{{order.delivered}}</th>
+				<th>{{order.customer}}</th>
+				<th>{{order.type}}</th>
 			</tr>
 		</table>
 	</div>
 	<div>
 		<a href="PizzaOrderSite.html">Back</a>
 	</div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+	
 </body>
 </html>

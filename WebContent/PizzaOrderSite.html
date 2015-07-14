@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
 <meta charset="UTF-8">
 <title>Order pizza</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
 </head>
 <body class="background">
+
+	<h1>{{hello}}</h1>
+	<input type="text" ng-model="hello"/>
+
 	<form action="PizzaOrders.html">
 		<div>
 			<fieldset>
@@ -60,5 +65,11 @@
 			<input class="button" type="submit" value="Order pizza">
 		</div>
 	</form>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
 </body>
 </html>
